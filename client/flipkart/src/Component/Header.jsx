@@ -4,9 +4,51 @@ import {Search,ShoppingCart} from 'lucide-react'
 import '../Component/Header.css'
 import {Link} from 'react-router-dom'
 import { useEffect } from 'react';
-import Imageslider from './Imageslider';
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 const Header = () => {
 
+  const slideContainerRef = useRef(null);
+const [images,setImages] =useState([]);
+// let [data,setData]=useState([]);
+let navigate=useNavigate();
+  useEffect(()=>{
+    const fetchImage=async()=>{
+      let response=await axios.get('http://localhost:3000/api/products');
+      response =response.data;
+      setImages(response)
+      // console.log(response);
+    };
+    fetchImage();
+    
+  },[])
+
+  // <Image slider ------------>
+
+  useEffect(() => {
+    const slideContainer = slideContainerRef.current;
+    let currentIndex = 0;
+
+    const autoSlide = () => {
+      if (currentIndex >= images.length - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex++;
+      }
+      slideContainer.style.transform = `translateX(-${currentIndex *200}px)`;
+    };
+
+    const intervalId = setInterval(autoSlide, 2000);
+
+    return () => clearInterval(intervalId); // Cleanup on unmount
+  }, [images]);
+
+
+  // console.log(images.image);
+  // images.map((item,index)=>{
+  //   console.log(item.image);
+  // })
   let [profile,setProfile]=useState();
   useEffect(()=>{
 let name=localStorage.getItem("userData")
@@ -20,6 +62,12 @@ console.log(profile);}
     // navigate("/NavBar")
     window.location.reload()
   }
+
+
+  function View(id) {
+
+    navigate("/viewcart", { state: { cart :[id]} })
+}
 
   return (<>
     <div className='container-fluid' id='nav'>
@@ -49,6 +97,9 @@ console.log(profile);}
     <div className="submenu">
       <div className="submenu-item">
         <a href="/signup" className="submenu-link" onClick={()=>fun1()} > LogOut </a>
+      </div>
+      <div className="submenu-item">
+        <a href="/addproduct" className="submenu-link" > Product </a>
       </div>
       {/* <div className="submenu-item">
         <a href="#" className="submenu-link"> Design </a>
@@ -108,9 +159,30 @@ console.log(profile);}
 </span>
 </div>
 
+<div className="container" style={{display:"flex" ,justifyContent:"center", width:"85%"}}>
+  <div className="container" style={{overflow:'hidden', height:"400px",marginTop:"7px" }}>
+      <div
+        ref={slideContainerRef}
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          width: 'fit-content',
+          gap: '50px',
+          transition: 'transform 0.5s ease-in-out',
+          marginTop:"5px"
 
-<Imageslider/>
-
+        }}
+      >
+        {images.map((item, index) => (
+          <div className='design_card' key={index} style={{ flexShrink: '0', width: 'fit-content' }} onClick={()=>{ View(item._id)}}>
+            <img src={item.image} alt={`slide-${index}`} height={300} width={350} /><br/>
+            <div style={{display:"flex", justifyContent:"space-around"}}><span align="center">Product : {item.name}</span> <span>Price : ${item.price}</span></div>
+          </div>
+        ))}
+      </div>
+    </div>
+    </div>
+ 
 </>
   )
 }

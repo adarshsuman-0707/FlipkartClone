@@ -1,58 +1,51 @@
-import React from 'react'
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+// src/ImageSlider.js
+import React, { useState, useEffect } from 'react';
+import './ImageSlider.css'; // Import CSS for styling
 
-const spanStyle = {
-  padding: '20px',
-  background: '#efefef',
-  color: '#000000'
-}
+const images = [
+    { src: 'https://via.placeholder.com/500x400?text=Image+1' },
+    { src: 'https://via.placeholder.com/500x400?text=Image+2' },
+    { src: 'https://via.placeholder.com/500x400?text=Image+3' },
+    { src: 'https://via.placeholder.com/500x400?text=Image+4' },
+];
 
-const divStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundSize: 'cover',
-  height: '300px',
-  marginTop:'-5px'
-  ,width:'93x%'
-}
-const slideImages = [
-    {
-      url: 'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-      caption: 'Slide 1'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
-      caption: 'Slide 2'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-      caption: 'Slide 3'
-    },
-  ];
 const Imageslider = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    
-   
-  return (
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+    };
 
-    <div className="container" style={{width:'100%' ,  padding: '20px'}}>
-    <Slide>
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
 
-     {
-     
-     slideImages.map((slideImage, index)=> (
-        <div key={index}>
-          <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-            <span style={spanStyle}>{slideImage.caption}</span>
-          </div>
+    // Optional: Auto-slide every 3 seconds
+    useEffect(() => {
+        const interval = setInterval(nextSlide, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <div className="slider">
+            <button className="prev" onClick={prevSlide}>❮</button>
+            <div className="slider-content">
+                {images.map((image, index) => (
+                    <img
+                        key={index}
+                        src={image.src}
+                        alt={`Slide ${index}`}
+                        className={`slide ${index === currentIndex ? 'active' : ''}`}
+                    />
+                ))}
+            </div>
+            <button className="next" onClick={nextSlide}>❯</button>
         </div>
-   
-      ))} 
-    </Slide>
-  </div>
-  )
-}
+    );
+};
 
-export default Imageslider
+export default Imageslider;
