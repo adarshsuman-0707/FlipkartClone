@@ -1,0 +1,145 @@
+/* Main container for the product data */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.dataContainer {
+  width: 80%;
+  margin: auto;
+}
+
+.headingPro {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 0 10px red,1px 2px 5px crimson,-1px 3px 2px navajowhite;
+  
+}
+
+/* Each product entry */
+#inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Product image */
+#imgProduct {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Product information */
+.showData {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.headingProd {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#datainfo {
+  color: #555;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+/* Update/Delete buttons */
+.update {
+  margin-top: 10px;
+}
+
+#updbtn, #delbtn {
+  cursor: pointer;
+  padding: 6px 12px;
+  margin-right: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#updbtn {
+  background-color: #28a745;
+  color: white;
+}
+
+#delbtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+#updbtn:hover {
+  background-color: #218838;
+}
+
+#delbtn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 768px) {
+  .headingPro {
+    font-size: 1.8rem;
+  }
+
+  #inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #imgProduct {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  #datainfo {
+    font-size: 0.9rem;
+  }
+
+  #updbtn, #delbtn {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 480px) {
+  .headingPro {
+    font-size: 1.5rem;
+  }
+
+  #inner {
+    padding: 15px;
+  }
+
+  #imgProduct {
+    width: 120px;
+  }
+
+  #datainfo {
+    font-size: 0.8rem;
+  }
+
+  #updbtn, #delbtn {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+}

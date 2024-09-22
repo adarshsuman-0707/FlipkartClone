@@ -1,0 +1,142 @@
+/* Main container */
+.innerContainer{
+    display: flex;
+}
+  
+  /* Product card */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  /* Product image */
+  .product-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Product details */
+  .product-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Buy button */
+  .buy-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Quantity selector and Add to Cart button */
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .quantity-selector label {
+    font-size: 1.1rem;
+  }
+  
+  .quantity-selector input {
+    width: 60px;
+    padding: 5px;
+    font-size: 1rem;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .confirm-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles for tablets */
+  @media (max-width: 768px) {
+    .card {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .product-details h2 {
+      font-size: 1.5rem;
+    }
+  
+    .product-details p {
+      font-size: 1rem;
+    }
+  
+    .buy-btn, .confirm-btn {
+      font-size: 1rem;
+      padding: 8px 12px;
+    }
+  
+    .quantity-selector input {
+      width: 50px;
+    }
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 480px) {
+    .card {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .product-details h2 {
+      font-size: 1.3rem;
+    }
+  
+    .product-details p {
+      font-size: 0.9rem;
+    }
+  
+    .buy-btn, .confirm-btn {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+    }
+  
+    .quantity-selector input {
+      width: 40px;
+    }
+  }
+  

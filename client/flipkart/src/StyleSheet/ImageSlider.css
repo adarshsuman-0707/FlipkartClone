@@ -1,0 +1,47 @@
+/* src/ImageSlider.css */
+.slider {
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-${(props) => props.currentIndex * 100}%);
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

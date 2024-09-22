@@ -1,0 +1,34 @@
+/* NotFound.css */
+.notfound-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f8f9fa;
+  }
+  
+  .notfound-container h2 {
+    font-size: 3rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+  }
+  
+  .notfound-container p {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .notfound-container a {
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .notfound-container a:hover {
+    color: #0056b3;
+  }
+  

@@ -6,8 +6,8 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = 'https://gjbteqzcgvndznnfdhbk.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdqYnRlcXpjZ3ZuZHpubmZkaGJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjI3NzQ1ODIsImV4cCI6MjAzODM1MDU4Mn0.XaLKP0kS6R8Pg2HhwYtLuFRhlfeQ7lhhWFpkX1PsdoM'
 const supabase = createClient(supabaseUrl, supabaseKey)
-
-import '../Component/Product.css'
+import { Link } from 'react-router-dom';
+import '../StyleSheet/Product.css'
 // import { Container } from 'lucide-react';/
 const Product = () => {
 const [images,setImages] =useState([]);
@@ -74,18 +74,19 @@ let [data,setData]=useState([]);
     }
   return (
     <>   
-<Navbar/>
-     <div className='container-fluid'>
-      <div className='container'>
+{/* <Navbar/> */}
+     <div className='container-fluid' id="body">
+      <div className="container outerBox">
         <div className='formk'>
       
           <div className='innerform'>
             <br />
-         <div className='Head'> <span  align='center'>Product Information</span><span>check</span> </div>
-       
+         <div className='Head'> <span id="headingPro">Product Information</span><span ><Link id='headingPro' to='/products' style={{textDecoration:"none",color:"white"}}>Show all</Link></span> </div>
+       <br />
 
         <form onSubmit={done} >
-            <div className='alignment'>
+          <span className='Managespace'>
+                        <div className='alignment'>
             {/* <input type="text" name="name"   onInput={fun1} value={input.name}placeholder='name' id="" /><br /> */}
             <div class="inputContainer">
         <input required="required" name="name"  onInput={fun1} value={input.name} id="inputField" placeholder="Product name" type="text"/>
@@ -122,16 +123,20 @@ let [data,setData]=useState([]);
         <svg viewBox="0 0 448 512" className="userIcon"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
     </div>
     <div className="inputContainer">
-        <input required="required" id="inputField" name='image' onChange={handleImageChange}  placeholder='image' type="file"/>
+        <input required="required" id="" className='fileField' name='image' onChange={handleImageChange}  placeholder='image' type="file"/>
         <label className="usernameLabel" for="inputField">Image</label>
         <svg viewBox="0 0 448 512" className="userIcon"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
     </div>
+ 
+
             {/* <input type="text" name="category"   onInput={fun1} value={input.category} placeholder='category' id="" /><br />
             <input type="file" name="image"   onChange={handleImageChange}  placeholder='image' id="" /> */}
             </div>
-            <br />
+            </span>
+
+           
             {/* <input type='submit' /> */}
-          <div style={{display:"flex", justifyContent:'flex-end'}}>  <button className="btn"> submit</button> </div>
+          <div style={{display:"flex", justifyContent:'flex-end'}} >  <button className="btn"> submit</button> </div>
 
 
         </form>

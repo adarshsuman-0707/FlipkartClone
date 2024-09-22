@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from './Header'
-import '../Component/Signup.css'
+import '../StyleSheet/Signup.css'
 import {CircleX} from  'lucide-react'
 import {useNavigate } from 'react-router-dom'
 
@@ -89,7 +89,7 @@ else{
         <input className="input" type="number" style={{width:'445px'}} name="contact" onInput={fun1} value={data.contact}placeholder="" required/>
         <span>Contact</span>
     </label>
-<button className="signupbtn" style={{marginTop:"180px"}}>Submit</button>
+<button className="signupbtn" style={{marginTop:"10px"}}>Submit</button>
     <p className="signin">Already have an acount ? <a href="/login">Signin</a> </p>
 </form>
 </div>

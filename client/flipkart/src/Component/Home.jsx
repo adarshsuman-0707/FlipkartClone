@@ -2,7 +2,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Search,ShoppingCart} from 'lucide-react'
-import '../Component/Header.css'
+import '../StyleSheet/Header.css'
 import {Link} from 'react-router-dom'
 const Home = () => {
   return (

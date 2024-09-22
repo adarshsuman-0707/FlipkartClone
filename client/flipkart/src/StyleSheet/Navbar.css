@@ -1,0 +1,120 @@
+#nav {
+    background-color: #2874f0;
+    position: sticky;
+  }
+  
+  #navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width:83%;
+    /* position: sticky; */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .searchBox {
+    flex-grow: 1;
+    display: flex;
+    width:auto;
+    justify-content: center;
+    box-shadow: 0 0 5px black;
+
+    align-items:center;
+    justify-content:center;
+    position: relative;  
+  
+  }
+  
+  .outerSearchbody{
+    max-width: 800px;
+    min-width: 30%;
+  }
+  .searchBox form {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .inp {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .nav-part2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-child {
+    margin-left: 20px;
+    color: white;
+  }
+  @media (min-width: 979px ) and (max-width:1080px){
+    .inp{
+        width:fit-content;   
+        /* outline: none; */
+        height:45px;
+        border:none;
+        padding-left:5px;
+      }
+      .searchBox{
+        border-radius:5px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px black;
+        background:white;
+        width:100%;
+        height:50px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position: relative;  
+      }
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 965px) {
+    .mobile-menu-toggle {
+      display: block;
+      color: white;
+    }
+  
+    .searchBox {
+      display: none;
+    }
+  
+    .nav-part2 {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: #2874f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .nav-part2.open {
+      display: flex;
+    }
+  
+    .nav-child {
+      margin: 10px 0;
+    }
+  }
+  

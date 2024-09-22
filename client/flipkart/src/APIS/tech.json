@@ -1,0 +1,192 @@
+[
+    {
+        "_id": "650adc3f8f5fa7b18bcf1111",
+        "name": "Headphones Wireless",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 103.2,
+        "brand": "next",
+        "image": "https://i.ibb.co/zS3k6QB/headphone-1.webp",
+        "isNew": true,
+        "category": "Headphones"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1112",
+        "name": "Gaming Headphone",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 270,
+        "brand": "Techno",
+        "image": "https://i.ibb.co/M6nVQ2v/headphone-5.webp",
+        "isNew": true,
+        "category": "Headphones"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1113",
+        "name": "Headphone with Mic",
+        "description": "You will be comfortable from the first call to the last...",
+        "price": 360,
+        "brand": "JBL",
+        "image": "https://i.ibb.co/xDqmwGW/headphone-8.webp",
+        "isNew": true,
+        "category": "Headphones"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1114",
+        "name": "Galaxy Android Tablet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 340,
+        "brand": "Samsung",
+        "image": "https://i.ibb.co/RpnnGmx/mobile-1.webp",
+        "isNew": true,
+        "category": "Mobile Tablets"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1115",
+        "name": "iPhone 14 Pro",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 1350,
+        "brand": "Apple",
+        "image": "https://i.ibb.co/gmdpWtD/mobile-5.webp",
+        "isNew": true,
+        "category": "Mobile Tablets"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1116",
+        "name": "Apple iPad Air",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 949.99,
+        "brand": "Apple",
+        "image": "https://i.ibb.co/G9ttXCM/ipad-1.webp",
+        "isNew": true,
+        "category": "Mobile Tablets"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1117",
+        "name": "Sony Smart Watch",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 189.99,
+        "brand": "Sony",
+        "image": "https://i.ibb.co/sQmZc0x/watch-5.webp",
+        "isNew": true,
+        "category": "Smart Watch"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1118",
+        "name": "Sony Lady Fitness Watch",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 169,
+        "brand": "Sony",
+        "image": "https://i.ibb.co/w4K4TY2/watch-9.webp",
+        "isNew": true,
+        "category": "Smart Watch"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1119",
+        "name": "Apple Watch Sport Band",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 399.99,
+        "brand": "Apple",
+        "image": "https://i.ibb.co/xqQtGPr/watch-1.webp",
+        "isNew": true,
+        "category": "Smart Watch"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1120",
+        "name": "Lenovo Wireless Bluetooth",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 79.99,
+        "brand": "Lenovo",
+        "image": "https://i.ibb.co/0XPd7D4/blutooth-4.webp",
+        "isNew": true,
+        "category": "Bluetooth"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1121",
+        "name": "Lenovo Sports Bluetooth",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 49,
+        "brand": "Lenovo",
+        "image": "https://i.ibb.co/YNLw2QM/blutooth-1.webp",
+        "isNew": true,
+        "category": "Bluetooth"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1122",
+        "name": "DeepCool Air Cooler",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 110,
+        "brand": "IBM",
+        "image": "https://i.ibb.co/2d2qBRb/cpu-1.webp",
+        "isNew": true,
+        "category": "CPU Heat Pipes"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1123",
+        "name": "Antec Air Cooler",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 170,
+        "brand": "Microsoft",
+        "image": "https://i.ibb.co/yqndcgs/cpu-5.webp",
+        "isNew": true,
+        "category": "CPU Heat Pipes"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1124",
+        "name": "Nike Retro GTS-2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 399.99,
+        "brand": "Nike",
+        "image": "https://i.ibb.co/WFWKQWZ/shoes-1.webp",
+        "isNew": true,
+        "category": "Shoes"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1125",
+        "name": "INIKA Mineral Sunkissed",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 80,
+        "brand": "Inika",
+        "image": "https://i.ibb.co/PGRX8wM/powder-1.webp",
+        "isNew": true,
+        "category": "Discover Skincare"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1126",
+        "name": "Brand Cosmetic Product",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 120,
+        "brand": "Iconic",
+        "image": "https://i.ibb.co/qkspnNy/cosmetics-1.webp",
+        "isNew": true,
+        "category": "Awesome Lip Care"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1127",
+        "name": "Fortuna Bangle Three-row",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 499,
+        "brand": "next",
+        "image": "https://i.ibb.co/ThVqy07/bracelet-4.webp",
+        "isNew": true,
+        "category": "Bracelets"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1128",
+        "name": "Tea Tree Lemon For Fine Hair",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 55,
+        "brand": "Iconic",
+        "image": "https://i.ibb.co/998PPnW/cosmetics-4.webp",
+        "isNew": true,
+        "category": "Discover Skincare"
+    },
+    {
+        "_id": "650adc3f8f5fa7b18bcf1129",
+        "name": "Innisfree Face Wash",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+        "price": 99.99,
+        "brand": "Extras",
+        "image": "https://i.ibb.co/9n6f275/cream-1.webp",
+        "isNew": true,
+        "category": "Awesome Lip Care"
+    }
+]

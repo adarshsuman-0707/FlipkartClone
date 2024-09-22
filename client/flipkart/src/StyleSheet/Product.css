@@ -1,0 +1,311 @@
+/* Main container */
+.formk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 20px; */
+  height: 90vh;
+}
+/* .outerBox{
+padding: 10px;
+} */
+/* Header styling */
+.Head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  /* background-color: #333; */
+  color: white;
+  text-shadow: 0 0 10px red,1px 2px 5px crimson,-1px 3px 2px navajowhite;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.Head span {
+  font-weight: bold;
+}
+
+.Head a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.Head a:hover {
+  color: #ccc;
+}
+
+/* Responsive header for smaller screens */
+@media (max-width: 768px) {
+  .Head {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Head span {
+    margin: 10px 0;
+  }
+
+  .Head a {
+    font-size: 1rem;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .Head {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Body background with cover and blending */
+#body {
+  height: 91vh;
+  background-repeat: no-repeat;
+  margin-top:2px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiM_JpDmcOBd1rmdApzGxQpAlIdlygeu76vg&s");
+}
+
+/* Inner form styling */
+.innerform {
+  padding: 30px;
+  height: fit-content;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(245, 222, 179, 0.474);
+  border-radius: 8px;
+}
+
+/* Alignment container for flexible layout */
+.alignment {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Managespace class for vertical centering and spacing */
+.Managespace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1 0 5rem;
+}
+
+/* Input container for consistent spacing */
+.inputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Input field styling */
+#inputField, .fileField {
+  width: 500px;
+  border: 2px solid rgb(250, 242, 242);
+  background-color: transparent;
+  box-shadow: 0 0 10px whitesmoke, 1px 2px 3px black;
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: black;
+  font-weight: 500;
+  outline: none;
+  caret-color: rgb(155, 78, 255);
+  transition-duration: 0.3s;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Responsive adjustments for medium screens (max-width: 965px) */
+@media (max-width: 965px) {
+  #inputField, .fileField {
+    width: 200px;
+    padding: 10px 12px;
+    font-size: 1rem;
+  }
+
+  .alignment {
+    padding: 5px;
+  }
+.outerBox{
+  padding-top: -20px;;
+}
+  .formk {
+    height: 90vh;
+  }
+
+  #body {
+    height: 91vh;
+  }
+
+  .Head {
+    height: 50px;
+    padding: 15px;
+    justify-content: space-around;
+  }
+
+  .Head span {
+    font-size: 1rem;
+  }
+}
+
+/* Further responsive adjustments for smaller screens (max-width: 600px) */
+@media (max-width: 600px) {
+  .alignment {
+    padding: 3px;
+    gap: 30px;
+  }
+
+  .fileField {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: -19px;
+    width: 200px;
+  }
+
+  #inputField {
+    width: 200px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .Head {
+    height: 50px;
+    padding: 15px;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: -50px;
+  }
+
+ #headingPro{
+  font-size: 12px;
+ }
+}
+
+  .userIcon {
+    position: absolute;
+    fill: rgb(155, 78, 255);
+    width: 12px;
+    top: -23px;
+    left: -15px;
+    opacity: 0;
+    transition: .2s linear;
+  }
+  
+  .usernameLabel {
+    position: absolute;
+    top: -25px;
+    left: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    transition: .2s linear;
+    opacity: 0;
+  }
+  
+  #inputField:focus ~ .usernameLabel,
+  #inputField:valid ~ .usernameLabel {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  
+  #inputField:focus ~ .userIcon,
+  #inputField:valid ~ .userIcon {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  
+  #inputField:focus,
+  #inputField:valid {
+    background-color: #ddd;
+    transition-duration: .3s;
+  }
+  
+  /* From Uiverse.io by glisovic01 */ 
+.btn {
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    margin: 1rem auto;
+    padding: 0.7rem 2rem;
+    border-radius: 30em;
+    border-style: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: transparent;
+    box-shadow: 1px 1px 12px #000000;
+  }
+  
+  .btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #118109;
+    transform: translateX(-101%);
+    transition: all .3s ease;
+    z-index: -1;
+  }
+  
+  .btn:hover {  
+    color: #fefafa;
+    transition: all .3s ease;
+  }
+  
+  .btn:hover::before {
+    transform: translateX(0);
+  }
+
+  .slider {
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    animation: slide 16s infinite;
+}
+
+.slide {
+    width: 100%;
+    transition: transform 1s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
